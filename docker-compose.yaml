@@ -26,7 +26,7 @@ services:
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
-    container_name: kafka
+    container_name: kafka-isolations
 
   kafka-ui:
     image: provectuslabs/kafka-ui:latest
@@ -35,14 +35,14 @@ services:
       KAFKA_CLUSTERS_0_NAME: local-kafka
       KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:9092
       KAFKA_CLUSTERS_0_ZOOKEEPER: zookeeper:2181
-    container_name: kafka-ui
+    container_name: kafka-ui-isolations
 
   zookeeper:
     image: confluentinc/cp-zookeeper:7.6.0
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
-    container_name: zookeeper
+    container_name: zookeeper-isolations
 
   # postgres
   postgres:
@@ -60,7 +60,7 @@ services:
       POSTGRES_DB: postgres
       POSTGRES_USER: root
       POSTGRES_PASSWORD: root
-    container_name: postgres
+    container_name: postgres-isolations
 
   postgres-init:
     image: postgres:15
@@ -72,7 +72,7 @@ services:
     depends_on: [ "postgres" ]
     environment:
       PGPASSWORD: root
-    container_name: postgres-init
+    container_name: postgres-init-isolations
 
   postgres-admin:
     image: dpage/pgadmin4
@@ -82,7 +82,7 @@ services:
     environment:
       PGADMIN_DEFAULT_EMAIL: postgresadmin@admin.com
       PGADMIN_DEFAULT_PASSWORD: postgresadmin
-    container_name: postgres-admin
+    container_name: postgres-admin-isolations
 
   postgres-migrator-operations:
     <<: *base-service
@@ -92,33 +92,33 @@ services:
         condition: service_healthy
       postgres-init:
         condition: service_completed_successfully
-    container_name: "postgres-migrator-operations"
+    container_name: "postgres-migrator-operations-isolations"
 
   # gateway-services
   http-gateway:
     <<: *python-service
     ports: [ "8001:8001" ]
     command: "services.gateway.server.http"
-    container_name: "http-gateway"
+    container_name: "http-gateway-isolations"
 
   grpc-gateway:
     <<: *python-service
     ports: [ "9001:9001" ]
     command: "services.gateway.server.grpc"
-    container_name: "grpc-gateway"
+    container_name: "grpc-gateway-isolations"
 
   # operations-service
   http-operations:
     <<: *python-service
     ports: [ "8002:8002" ]
     command: "services.operations.server.http"
-    container_name: "http-operations"
+    container_name: "http-operations-isolations"
 
   grpc-operations:
     <<: *python-service
     ports: [ "9002:9002" ]
     command: "services.operations.server.grpc"
-    container_name: "grpc-operations"
+    container_name: "grpc-operations-isolations"
 
   kafka-operations:
     <<: *python-service
