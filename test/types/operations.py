@@ -1,9 +1,6 @@
 from enum import StrEnum
 
-from libs.base.enums import ProtoEnum
-
-
-class OperationTestType(ProtoEnum, StrEnum):
+class OperationTestType(StrEnum):
     FEE = "FEE"
     TOP_UP = "TOP_UP"
     PURCHASE = "PURCHASE"
@@ -14,7 +11,7 @@ class OperationTestType(ProtoEnum, StrEnum):
     CASH_WITHDRAWAL = "CASH_WITHDRAWAL"
 
 
-class OperationTestStatus(ProtoEnum, StrEnum):
+class OperationTestStatus(StrEnum):
     FAILED = "FAILED"
     REVERSED = "REVERSED"
     COMPLETED = "COMPLETED"
