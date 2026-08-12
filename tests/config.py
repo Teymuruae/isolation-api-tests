@@ -38,5 +38,7 @@ class TestSettings(BaseSettings):
     обработки событий перед синхронными проверками.
     """
 
+    operations_postgres_client: PostgresClientTestConfig
+
 
 test_settings = TestSettings()
