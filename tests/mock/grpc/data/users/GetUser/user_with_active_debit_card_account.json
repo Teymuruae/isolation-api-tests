@@ -1,0 +1,10 @@
+{
+  "user": {
+    "id": "ef1bd879-469d-47e6-9ee1-b5d0db477d71",
+    "email": "alex.pushkin@example.com",
+    "lastName": "Пушкин",
+    "firstName": "Александр",
+    "middleName": "Сергеевич",
+    "phoneNumber": "+79205554433"
+  }
+}
