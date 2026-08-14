@@ -21,7 +21,7 @@ class AccountsMockService(AccountsServiceServicer):
         scenario = await get_scenario_grpc(context)
 
         return await loader.load_grpc(
-            file=f"GetAccounts/{scenario}.json",
+            file=f"GetAccount/{scenario}.json",
             model=GetAccountResponse
         )
 
