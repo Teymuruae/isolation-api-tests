@@ -1,0 +1,28 @@
+{
+  "cards": [
+    {
+      "id": "74a0f48a-297e-4bc1-9edf-ac5e730f1a6d",
+      "pin": "1234",
+      "cvv": "456",
+      "type": "VIRTUAL",
+      "status": "ACTIVE",
+      "accountId": "6d0344f0-85cb-458b-9ba6-7b2a6b29bcd9",
+      "cardNumber": "4111111111111111",
+      "cardHolder": "IVAN KUZNECOV",
+      "expiryDate": "2027-12-31",
+      "paymentSystem": "VISA"
+    },
+    {
+      "id": "88a3d0f5-488b-4f30-b2e7-98e06285e65a",
+      "pin": "9876",
+      "cvv": "789",
+      "type": "PHYSICAL",
+      "status": "ACTIVE",
+      "accountId": "6d0344f0-85cb-458b-9ba6-7b2a6b29bcd9",
+      "cardNumber": "5500000000000004",
+      "cardHolder": "IVAN KUZNECOV",
+      "expiryDate": "2028-06-30",
+      "paymentSystem": "MASTERCARD"
+    }
+  ]
+}
