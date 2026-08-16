@@ -185,7 +185,7 @@ def assert_get_account_details_response_user_with_active_debit_card_account(
                     payment_system=CardTestPaymentSystem.VISA,
                 ),
                 CardTestSchema(
-                    id="33333333-dddd-4eee-8fff-444444444444",
+                    id="88a3d0f5-488b-4f30-b2e7-98e06285e65a",
                     pin="9876",
                     cvv="789",
                     type=CardTestType.PHYSICAL,
