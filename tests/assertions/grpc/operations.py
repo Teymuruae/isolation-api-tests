@@ -5,15 +5,12 @@ from pydantic import UUID4
 
 from tests.assertions.base import assert_equal
 from tests.clients.postgres.operations.model import OperationsTestModel
-from tests.schema.operations import (
-    OperationEventTestSchema,
-    GetOperationsResponseTestSchema
-)
+from tests.schema.operations import  OperationEventTestSchema
+
 from tests.tools.logger import get_test_logger
 from contracts.services.operations.operation_pb2 import Operation
 from tests.types.operations import from_proto_status, from_proto_type
 from tests.tools.date import to_proto_test_datetime
-from contracts.services.operations.rpc_get_operation_pb2 import GetOperationResponse
 from contracts.services.operations.rpc_get_operations_pb2 import GetOperationsResponse
 
 logger = get_test_logger("OPERATIONS_ASSERTIONS")
@@ -76,3 +73,7 @@ def assert_get_operations_response_from_models(
     assert_equal(len(actual.operations), len(expected), "operations count")
     for index, model in enumerate(expected):
         assert_operation_from_model(actual.operations[index], model)
+
+
+o = Operation(user_id='33333333-dddd-4eee-8fff-444444444444')
+print(uuid.UUID(o.user_id))
