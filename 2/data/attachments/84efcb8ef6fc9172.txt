@@ -1,0 +1,34 @@
+INFO     GATEWAY_GRPC_TEST_CLIENT:logger_interceptor.py:54 REQUEST: /contracts.services.gateway.GatewayService/GetAccountDetails
+INFO     GATEWAY_GRPC_TEST_CLIENT:logger_interceptor.py:65 RESPONSE: /contracts.services.gateway.GatewayService/GetAccountDetails
+INFO     GATEWAY_ASSERTIONS:gateway.py:100 Check get account details response. User with active debit card account
+INFO     GATEWAY_ASSERTIONS:gateway.py:61 Check get account details response
+INFO     GATEWAY_ASSERTIONS:gateway.py:37 Check account details
+INFO     ACCOUNTS_ASSERTIONS:accounts.py:12 Check account
+INFO     BASE_ASSERTIONS:base.py:27 Check that "id" equals to 78406712-8e22-4901-a8dc-961fd5ce0f78
+INFO     BASE_ASSERTIONS:base.py:27 Check that "type" equals to 1
+INFO     BASE_ASSERTIONS:base.py:27 Check that "status" equals to 1
+INFO     BASE_ASSERTIONS:base.py:27 Check that "user_id" equals to ef1bd879-469d-47e6-9ee1-b5d0db477d71
+INFO     BASE_ASSERTIONS:base.py:27 Check that "balance" equals to -15230.75
+INFO     BASE_ASSERTIONS:base.py:27 Check that "cards count" equals to 2
+INFO     CARDS_ASSERTIONS:cards.py:11 Check card
+INFO     BASE_ASSERTIONS:base.py:27 Check that "id" equals to 88a3d0f5-488b-4f30-b2e7-98e06285e65a
+INFO     BASE_ASSERTIONS:base.py:27 Check that "pin" equals to 1234
+INFO     BASE_ASSERTIONS:base.py:27 Check that "cvv" equals to 456
+INFO     BASE_ASSERTIONS:base.py:27 Check that "type" equals to 1
+INFO     BASE_ASSERTIONS:base.py:27 Check that "status" equals to 1
+INFO     BASE_ASSERTIONS:base.py:27 Check that "account_id" equals to 78406712-8e22-4901-a8dc-961fd5ce0f78
+INFO     BASE_ASSERTIONS:base.py:27 Check that "card_number" equals to 4111111111111111
+INFO     BASE_ASSERTIONS:base.py:27 Check that "card_holder" equals to ALEX PUSHKIN
+INFO     BASE_ASSERTIONS:base.py:27 Check that "expiry_date" equals to 2027-12-31
+INFO     BASE_ASSERTIONS:base.py:27 Check that "payment_system" equals to 2
+INFO     CARDS_ASSERTIONS:cards.py:11 Check card
+INFO     BASE_ASSERTIONS:base.py:27 Check that "id" equals to 4415c28b-b27b-4297-a7a9-7aa8c61566bb
+INFO     BASE_ASSERTIONS:base.py:27 Check that "pin" equals to 9876
+INFO     BASE_ASSERTIONS:base.py:27 Check that "cvv" equals to 789
+INFO     BASE_ASSERTIONS:base.py:27 Check that "type" equals to 2
+INFO     BASE_ASSERTIONS:base.py:27 Check that "status" equals to 1
+INFO     BASE_ASSERTIONS:base.py:27 Check that "account_id" equals to 78406712-8e22-4901-a8dc-961fd5ce0f78
+INFO     BASE_ASSERTIONS:base.py:27 Check that "card_number" equals to 5500000000000004
+INFO     BASE_ASSERTIONS:base.py:27 Check that "card_holder" equals to ALEX PUSHKIN
+INFO     BASE_ASSERTIONS:base.py:27 Check that "expiry_date" equals to 2028-06-30
+INFO     BASE_ASSERTIONS:base.py:27 Check that "payment_system" equals to 1

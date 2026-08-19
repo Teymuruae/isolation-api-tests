@@ -1,0 +1,34 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","21","[gRPC] Get user details. User with active credit card account","tests.suites.grpc","2026-08-19","passed","2026-08-19","TestGatewayGRPC","test_gateway","",""
+"","15","[HTTP][Postgres] Filter by card id. In progress purchase operation","tests.suites.http","2026-08-19","passed","2026-08-19","TestOperationsHTTP","test_operations","",""
+"","33","[gRPC][Postgres] Filter by card id. In progress purchase operation","tests.suites.grpc","2026-08-19","passed","2026-08-19","TestOperationsGRPC","test_operations","",""
+"","554","[HTTP][Kafka] Operation events. In progress purchase operation","tests.suites.http","2026-08-19","passed","2026-08-19","TestOperationsHTTP","test_operations","",""
+"","515","[HTTP][Kafka] Operation events. Completed purchase operation","tests.suites.http","2026-08-19","passed","2026-08-19","TestOperationsHTTP","test_operations","",""
+"","557","[gRPC][Kafka] Operation events. In progress purchase operation","tests.suites.grpc","2026-08-19","passed","2026-08-19","TestOperationsGRPC","test_operations","",""
+"
+        Сценарий:
+        Пользователь с активным кредитным счётом
+        запрашивает агрегированные данные через gateway-service.
+
+        Управляющая переменная теста — сценарий.
+        Все данные внешнего мира выбираются через него.
+        ","60","[HTTP] Get user details. User with active credit card account","tests.suites.http","2026-08-19","passed","2026-08-19","TestGatewayHTTP","test_gateway","",""
+"","13","[HTTP][Postgres] Filter by account id. Completed purchase operation","tests.suites.http","2026-08-19","passed","2026-08-19","TestOperationsHTTP","test_operations","",""
+"","513","[gRPC][Kafka] Operation events. Completed purchase operation","tests.suites.grpc","2026-08-19","passed","2026-08-19","TestOperationsGRPC","test_operations","",""
+"","11","[gRPC][Postgres] Filter by account id. Completed purchase operation","tests.suites.grpc","2026-08-19","passed","2026-08-19","TestOperationsGRPC","test_operations","",""
+"
+        Сценарий:
+        Пользователь с активным дебетовым счётом
+        запрашивает агрегированные данные через gateway-service.
+
+        Управляющая переменная теста — сценарий.
+        Все данные внешнего мира выбираются через него.
+        ","38","[HTTP] Get account details. User with active debit card account","tests.suites.http","2026-08-19","passed","2026-08-19","TestGatewayHTTP","test_gateway","",""
+"
+        Сценарий:
+        Пользователь с активным дебетовым счётом
+        запрашивает агрегированные данные через gateway-service.
+
+        Управляющая переменная теста — сценарий.
+        Все данные внешнего мира выбираются через него.
+        ","18","[gRPC] Get account details. User with active debit card account","tests.suites.grpc","2026-08-19","passed","2026-08-19","TestGatewayGRPC","test_gateway","",""
