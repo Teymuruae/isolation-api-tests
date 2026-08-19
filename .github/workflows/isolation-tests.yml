@@ -25,12 +25,12 @@ jobs:
     steps:
       # Шаг 1. Клонируем репозиторий в рабочую директорию раннера
       - name: Check out repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7.0.1
 
       # Шаг 2. Устанавливаем Python нужной версии
       # Важно: версия совпадает с локальной средой и Docker-образами
       - name: Set up Python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@v7.0.0
         with:
           python-version: '3.12'
 
@@ -67,7 +67,7 @@ jobs:
       # Они будут использованы во второй job
       - name: Upload Allure results
         if: always()
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7.0.1
         with:
           name: allure-results
           path: allure-results
@@ -86,14 +86,14 @@ jobs:
       # Шаг 1. Клонируем ветку gh-pages
       # В эту ветку будет опубликован HTML-отчёт
       - name: Check out repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7.0.1
         with:
           ref: gh-pages
           path: gh-pages
 
       # Шаг 2. Скачиваем сохранённые allure-results
       - name: Download Allure results
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v8.0.1
         with:
           name: allure-results
           path: allure-results
@@ -101,7 +101,7 @@ jobs:
       # Шаг 3. Генерируем HTML-отчёт Allure с историей запусков
       # allure_history — каталог, который сохраняется между сборками
       - name: Generate Allure Report with history
-        uses: simple-elf/allure-report-action@v1.13
+        uses: simple-elf/allure-report-action@v1.15
         if: always()
         with:
           allure_results: allure-results
@@ -111,7 +111,7 @@ jobs:
       # CI напрямую коммитит результат в ветку gh-pages
       - name: Deploy report to Github Pages
         if: always()
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages@v4.1.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
