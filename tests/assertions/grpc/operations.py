@@ -73,7 +73,3 @@ def assert_get_operations_response_from_models(
     assert_equal(len(actual.operations), len(expected), "operations count")
     for index, model in enumerate(expected):
         assert_operation_from_model(actual.operations[index], model)
-
-
-o = Operation(user_id='33333333-dddd-4eee-8fff-444444444444')
-print(uuid.UUID(o.user_id))
